@@ -1,1 +1,1 @@
- {CheckOptions: [ {key: xilinx-tb-process.TopFunctionName, value: 'leading_zero_count'}, {key: xilinx-tb-process.KeepTopName, value: 1}, {key: xilinx-tb-process.BCSim, value: '0'} ] } 
+ {CheckOptions: [ {key: xilinx-tb-process.TopFunctionName, value: 'divider'}, {key: xilinx-tb-process.KeepTopName, value: 1}, {key: xilinx-tb-process.BCSim, value: '0'} ] } 

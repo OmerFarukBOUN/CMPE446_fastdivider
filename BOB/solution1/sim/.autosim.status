@@ -1,10 +1,10 @@
 set status(tv_done) 0
-set status(tvin) "leading_zero_count.autotvin.dat"
+set status(tvin) "divider.autotvin.dat"
 set status(wrapc_done) 1
 set status(bc_done) 0
 set status(bc_tb_done) 0
 set status(bc_tb_new_done) 0
-set status(tvout) "leading_zero_count.autotvout.dat"
+set status(tvout) "divider.autotvout.dat"
 set status(sc_done) 0
 set status(cas_done) 0
 set status(hdl_tvin) ""

@@ -1,7 +1,7 @@
 [
   {
     "functionLabel": "",
-    "functionName": "leading_zero_count",
+    "functionName": "divider",
     "id": 0,
     "ifcond": "",
     "insert_position": "",
@@ -11,7 +11,7 @@
       "option": [
         {
           "name": "name",
-          "value": "leading_zero_count"
+          "value": "divider"
         }
       ]
     },

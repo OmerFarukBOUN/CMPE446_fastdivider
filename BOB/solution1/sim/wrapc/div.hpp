@@ -13,8 +13,8 @@
 #define maskL 0x00000FFF
 
 //#define BITWISE
-#define ARRAY
-#define LZC
+//#define ARRAY
+//#define LZC
 
 typedef ap_int<XLEN> operand_type;
 typedef ap_int<HALF> half_type;

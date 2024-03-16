@@ -3,15 +3,16 @@
 # SW Build 4126759 on Thu Feb  8 23:52:05 MST 2024
 # IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
 # SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
-# Start of session at: Sat Mar 16 04:02:19 2024
-# Process ID: 92169
+# Start of session at: Sat Mar 16 05:48:21 2024
+# Process ID: 102938
 # Current directory: /home/omerfaruk/Projects/okul/BOB/BOB/solution1/sim/verilog
-# Command line: xsim -source {xsim.dir/leading_zero_count/xsim_script.tcl}
+# Command line: xsim -source {xsim.dir/divider/xsim_script.tcl}
 # Log file: /home/omerfaruk/Projects/okul/BOB/BOB/solution1/sim/verilog/xsim.log
 # Journal file: /home/omerfaruk/Projects/okul/BOB/BOB/solution1/sim/verilog/xsim.jou
-# Running On: DarkChocolate, OS: Linux, CPU Frequency: 3053.080 MHz, CPU Physical cores: 4, Host memory: 16509 MB
+# Running On: DarkChocolate, OS: Linux, CPU Frequency: 3300.064 MHz, CPU Physical cores: 4, Host memory: 16509 MB
 #-----------------------------------------------------------
 start_gui
-source xsim.dir/leading_zero_count/xsim_script.tcl
-open_wave_config leading_zero_count_dataflow_ana.wcfg
-source leading_zero_count.tcl
+source xsim.dir/divider/xsim_script.tcl
+open_wave_config divider_dataflow_ana.wcfg
+source divider.tcl
+close_sim

@@ -5,7 +5,7 @@
 ## Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ############################################################
 open_project BOB
-set_top leading_zero_count
+set_top divider
 add_files div.cpp
 add_files div.hpp
 add_files -tb test_div.cpp -cflags "-Wno-unknown-pragmas"

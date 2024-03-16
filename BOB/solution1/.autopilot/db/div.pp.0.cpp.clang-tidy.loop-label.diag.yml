@@ -47,21 +47,21 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_1247_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_155_1:  '
-    FileOffset:      155
+    Message:         'Added loop label VITIS_LOOP_89_1:  '
+    FileOffset:      89
     FilePath:        div.cpp
     Replacements:    
       - FilePath:        /home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp
-        Offset:          1850992
+        Offset:          1850972
         Length:          0
-        ReplacementText: 'VITIS_LOOP_155_1: '
+        ReplacementText: 'VITIS_LOOP_89_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_166_2:  '
-    FileOffset:      166
+    Message:         'Added loop label VITIS_LOOP_101_2:  '
+    FileOffset:      101
     FilePath:        div.cpp
     Replacements:    
       - FilePath:        /home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp
-        Offset:          1851134
+        Offset:          1851126
         Length:          0
-        ReplacementText: 'VITIS_LOOP_166_2: '
+        ReplacementText: 'VITIS_LOOP_101_2: '
 ...

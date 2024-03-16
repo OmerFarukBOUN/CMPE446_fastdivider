@@ -1,7 +1,7 @@
 --- !Passed
 Pass:            reflow-recursive-inline
 Name:            RecursiveInline
-DebugLoc:        { File: div.cpp, Line: 158, Column: 9 }
+DebugLoc:        { File: div.cpp, Line: 92, Column: 9 }
 Function:        _Z18leading_zero_count7ap_uintILi32EE
 Args:            
   - String:          'Performing recursive inline in function '''
@@ -11,27 +11,27 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: div.cpp, Line: 159, Column: 13 }
+DebugLoc:        { File: div.cpp, Line: 93, Column: 13 }
 Function:        _Z18leading_zero_count7ap_uintILi32EE
 Args:            
   - String:          'Inlining function '''
   - Callee:          'LUT(ap_uint<8>) (.1)'
-    DebugLoc:        { File: div.cpp, Line: 439, Column: 0 }
+    DebugLoc:        { File: div.cpp, Line: 220, Column: 0 }
   - String:          ''' into '''
   - Caller:          'leading_zero_count(ap_uint<32>)'
-    DebugLoc:        { File: div.cpp, Line: 119, Column: 0 }
+    DebugLoc:        { File: div.cpp, Line: 50, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: div.cpp, Line: 119, Column: 0 }
+DebugLoc:        { File: div.cpp, Line: 50, Column: 0 }
 Function:        _Z18leading_zero_count7ap_uintILi32EE
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_166_2
+  - LoopName:        VITIS_LOOP_101_2
   - String:          ''' ('
-  - LoopLoc:         'div.cpp:166:20'
+  - LoopLoc:         'div.cpp:101:20'
   - String:          ') '
   - String:          'in function '''
   - String:          leading_zero_count
@@ -41,16 +41,30 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: div.cpp, Line: 119, Column: 0 }
+DebugLoc:        { File: div.cpp, Line: 50, Column: 0 }
 Function:        _Z18leading_zero_count7ap_uintILi32EE
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_155_1
+  - LoopName:        VITIS_LOOP_89_1
   - String:          ''' ('
-  - LoopLoc:         'div.cpp:155:20'
+  - LoopLoc:         'div.cpp:89:19'
   - String:          ') '
   - String:          'in function '''
   - String:          leading_zero_count
   - String:          ''' completely with a factor of '
   - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: div.cpp, Line: 6, Column: 0 }
+Function:        _Z7divider7in_type
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'leading_zero_count(ap_uint<32>)'
+    DebugLoc:        { File: div.cpp, Line: 50, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'divider(in_type)'
+    DebugLoc:        { File: div.cpp, Line: 6, Column: 0 }
+  - String:          ''''
 ...

@@ -13,7 +13,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=leading_zero_count_XLX_SEP_ PragmaOptions=name=leading_zero_count_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=divider_XLX_SEP_ PragmaOptions=name=divider_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -25,7 +25,23 @@
       <key>filename</key>
       <string>div.cpp</string>
       <key>line</key>
-      <integer>156</integer>
+      <integer>8</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=divider_XLX_SEP_ PragmaOptions=name=DESIGN_TOP_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>div.cpp</string>
+      <key>line</key>
+      <integer>90</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -41,7 +57,7 @@
       <key>filename</key>
       <string>div.cpp</string>
       <key>line</key>
-      <integer>158</integer>
+      <integer>92</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -57,7 +73,7 @@
       <key>filename</key>
       <string>div.cpp</string>
       <key>line</key>
-      <integer>167</integer>
+      <integer>102</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

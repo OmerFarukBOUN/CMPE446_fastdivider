@@ -61916,6 +61916,9 @@ using namespace std;
 
 out_type divider(in_type input) {
 
+#pragma HLS top name=DESIGN_TOP
+
+
  lookup_type divLUT[] = { 0b1000000000000000, 0b0111100001011100,
    0b0111000101100010, 0b0110101011111111, 0b0110010100100011,
    0b0101111110111110, 0b0101101011000101, 0b0101011000101101,
@@ -61927,7 +61930,7 @@ out_type divider(in_type input) {
    0b0010101101010100, 0b0010100111001100, 0b0010100001011000,
    0b0010011011110111, 0b0010010110100111, 0b0010010001101001,
    0b0010001100111010, 0b0010001000011001, 0b0010000100000110 };
-# 86 "/home/omerfaruk/Projects/okul/BOB/div.cpp"
+
  operand_type op1 = input.op1;
  operand_type op2 = input.op2;
  bool_type division_by_zero = 0;
@@ -61938,16 +61941,11 @@ out_type divider(in_type input) {
   quotient = 0;
   remainder = 0;
  } else {
-
-
   lzc_ret lzc = leading_zero_count(op2);
   operand_type yh = (op2 << lzc) & 0xFFFFF000;
   operand_type yl = (op2 << lzc) & 0x00000FFF;
-
-
   ap_uint<64> tmp = (op1 * uns(yh - yl)
     * (divLUT[ap_uint<5>((yh << 1)(31, 27))])) >> (16 + lzc);
-
   quotient = (tmp >> 61 - 2 * lzc);
   ap_int<32> tmp2 = (ap_int<64> ) op1 - op2 * quotient;
   if (tmp2 < 0) {
@@ -61957,23 +61955,26 @@ out_type divider(in_type input) {
    remainder = tmp2;
   }
  }
-
  return {quotient, remainder, division_by_zero};
 }
 
 lzc_ret leading_zero_count(reg input) {
+
+
+
  lzc_ret ret_val;
-# 129 "/home/omerfaruk/Projects/okul/BOB/div.cpp"
+# 63 "/home/omerfaruk/Projects/okul/BOB/div.cpp"
  ap_uint<4> LUTS8[4];
  ap_uint<5> LUTS16[2];
  ap_uint<4> intermediate4;
  ap_uint<5> intermediate5;
-# 155 "/home/omerfaruk/Projects/okul/BOB/div.cpp"
+# 89 "/home/omerfaruk/Projects/okul/BOB/div.cpp"
  for (int i = 0; i < 4; i++) {
 #pragma HLS UNROLL
 
 #pragma HLS inline recursive
-  LUTS8[i] = LUT(input.range(32 -1-8*i, 32 -8*(i+1)));
+  LUTS8[i] = LUT(input.range(32 - 1 - 8 * i,
+  32 - 8 * (i + 1)));
 
 
 
@@ -61993,19 +61994,157 @@ lzc_ret leading_zero_count(reg input) {
  ret_val = LUTS16[0] + intermediate5;
  return ret_val;
 }
-# 439 "/home/omerfaruk/Projects/okul/BOB/div.cpp"
+# 220 "/home/omerfaruk/Projects/okul/BOB/div.cpp"
 lut_output LUT(lut_input input) {
- lut_output LUT_array[] = { 8, 7, 6, 6, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3,
-    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0 };
- return LUT_array[input];
+ lut_output ret;
+ switch (input) {
+ case 0:
+  ret = 8;
+  break;
+ case 1:
+  ret =7;
+  break;
+ case 2:
+ case 3:
+  ret =6;
+  break;
+ case 4:
+ case 5:
+ case 6:
+ case 7:
+  ret =5;
+  break;
+ case 8:
+ case 9:
+ case 10:
+ case 11:
+ case 12:
+ case 13:
+ case 14:
+ case 15:
+  ret = 4;
+  break;
+ case 16:
+ case 17:
+ case 18:
+ case 19:
+ case 20:
+ case 21:
+ case 22:
+ case 23:
+ case 24:
+ case 25:
+ case 26:
+ case 27:
+ case 28:
+ case 29:
+ case 30:
+ case 31:
+  ret = 3;
+  break;
+ case 32:
+ case 33:
+ case 34:
+ case 35:
+ case 36:
+ case 37:
+ case 38:
+ case 39:
+ case 40:
+ case 41:
+ case 42:
+ case 43:
+ case 44:
+ case 45:
+ case 46:
+ case 47:
+ case 48:
+ case 49:
+ case 50:
+ case 51:
+ case 52:
+ case 53:
+ case 54:
+ case 55:
+ case 56:
+ case 57:
+ case 58:
+ case 59:
+ case 60:
+ case 61:
+ case 62:
+ case 63:
+  ret = 2;
+  break;
+ case 64:
+ case 65:
+ case 66:
+ case 67:
+ case 68:
+ case 69:
+ case 70:
+ case 71:
+ case 72:
+ case 73:
+ case 74:
+ case 75:
+ case 76:
+ case 77:
+ case 78:
+ case 79:
+ case 80:
+ case 81:
+ case 82:
+ case 83:
+ case 84:
+ case 85:
+ case 86:
+ case 87:
+ case 88:
+ case 89:
+ case 90:
+ case 91:
+ case 92:
+ case 93:
+ case 94:
+ case 95:
+ case 96:
+ case 97:
+ case 98:
+ case 99:
+ case 100:
+ case 101:
+ case 102:
+ case 103:
+ case 104:
+ case 105:
+ case 106:
+ case 107:
+ case 108:
+ case 109:
+ case 110:
+ case 111:
+ case 112:
+ case 113:
+ case 114:
+ case 115:
+ case 116:
+ case 117:
+ case 118:
+ case 119:
+ case 120:
+ case 121:
+ case 122:
+ case 123:
+ case 124:
+ case 125:
+ case 126:
+ case 127:
+  ret = 1;
+  break;
+ default:
+  ret = 0;
+  break;
+ }
+ return ret;
 }

@@ -23,13 +23,13 @@
       ^~~
       VITIS_LOOP_1247_1: 
 /home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp:3948:7: note: FIX-IT applied suggested code changes
-/home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp:38357:2: warning: Added loop label VITIS_LOOP_155_1:   [xilinx-label-all-loops]
+/home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp:38357:2: warning: Added loop label VITIS_LOOP_89_1:   [xilinx-label-all-loops]
  for (int i = 0; i < 4; i++) {
  ^~~
- VITIS_LOOP_155_1: 
+ VITIS_LOOP_89_1: 
 /home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp:38357:2: note: FIX-IT applied suggested code changes
-/home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp:38368:2: warning: Added loop label VITIS_LOOP_166_2:   [xilinx-label-all-loops]
+/home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp:38369:2: warning: Added loop label VITIS_LOOP_101_2:   [xilinx-label-all-loops]
  for (int i = 0; i < 2; i++) {
  ^~~
- VITIS_LOOP_166_2: 
-/home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp:38368:2: note: FIX-IT applied suggested code changes
+ VITIS_LOOP_101_2: 
+/home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp:38369:2: note: FIX-IT applied suggested code changes

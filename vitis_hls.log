@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running '/home/omerfaruk/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'omerfaruk' on host 'DarkChocolate' (Linux_x86_64 version 6.5.0-25-generic) on Sat Mar 16 04:01:51 +03 2024
+INFO: [HLS 200-10] For user 'omerfaruk' on host 'DarkChocolate' (Linux_x86_64 version 6.5.0-25-generic) on Sat Mar 16 05:47:36 +03 2024
 INFO: [HLS 200-10] On os Ubuntu 22.04.4 LTS
 INFO: [HLS 200-10] In directory '/home/omerfaruk/Projects/okul/BOB'
 INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
@@ -7,7 +7,7 @@ Sourcing Tcl script '/home/omerfaruk/Projects/okul/BOB/BOB/solution1/cosim.tcl'
 INFO: [HLS 200-1510] Running: source /home/omerfaruk/Projects/okul/BOB/BOB/solution1/cosim.tcl
 INFO: [HLS 200-1510] Running: open_project BOB 
 INFO: [HLS 200-10] Opening project '/home/omerfaruk/Projects/okul/BOB/BOB'.
-INFO: [HLS 200-1510] Running: set_top leading_zero_count 
+INFO: [HLS 200-1510] Running: set_top divider 
 INFO: [HLS 200-1510] Running: add_files div.cpp 
 INFO: [HLS 200-10] Adding design file 'div.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files div.hpp 
@@ -30,20 +30,22 @@ INFO: [HLS 200-1510] Running: cosim_design -wave_debug -trace_level port
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
 INFO: [COSIM 212-14] Instrumenting C test bench ...
    Build using "/home/omerfaruk/tools/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/g++"
-   Compiling apatb_leading_zero_count.cpp
+   Compiling apatb_divider.cpp
    Compiling div.cpp_pre.cpp.tb.cpp
    Compiling test_div.cpp_pre.cpp.tb.cpp
-   Compiling apatb_leading_zero_count_ir.ll
+   Compiling apatb_divider_ir.ll
    Generating cosim.tv.exe
 INFO: [COSIM 212-302] Starting C TB testing ... 
-29
-24
-31
-0
-16
-19
-19
-3
+14500 0
+10 225
+6 2101
+7 9
+11 14
+2 0
+4 0
+7 0
+division by zero
+4 2
 INFO: [COSIM 212-333] Generating C post check test bench ...
 INFO: [COSIM 212-12] Generating RTL test bench ...
 INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
@@ -52,18 +54,24 @@ INFO: [COSIM 212-15] Starting XSIM ...
 Vivado Simulator v2023.2.2
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/omerfaruk/tools/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_leading_zero_count_top glbl -Oenable_linking_all_libraries -prj leading_zero_count.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_17 -L floating_point_v7_0_22 --lib ieee_proposed=./ieee_proposed -s leading_zero_count -debug all 
+Running: /home/omerfaruk/tools/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_divider_top glbl -Oenable_linking_all_libraries -prj divider.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_17 -L floating_point_v7_0_22 --lib ieee_proposed=./ieee_proposed -s divider -debug all 
 Multi-threading is on. Using 6 slave threads.
 WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
     LIBRARY_PATH
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/omerfaruk/Projects/okul/BOB/BOB/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/omerfaruk/Projects/okul/BOB/BOB/solution1/sim/verilog/leading_zero_count.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module leading_zero_count
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/omerfaruk/Projects/okul/BOB/BOB/solution1/sim/verilog/leading_zero_count.autotb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module apatb_leading_zero_count_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/omerfaruk/Projects/okul/BOB/BOB/solution1/sim/verilog/leading_zero_count_LUT_array_i_ROM_AUTO_1R.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module leading_zero_count_LUT_array_i_ROM_AUTO_1R
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/omerfaruk/Projects/okul/BOB/BOB/solution1/sim/verilog/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/omerfaruk/Projects/okul/BOB/BOB/solution1/sim/verilog/divider_divLUT_ROM_AUTO_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider_divLUT_ROM_AUTO_1R
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/omerfaruk/Projects/okul/BOB/BOB/solution1/sim/verilog/divider_mul_32ns_32s_64_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider_mul_32ns_32s_64_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/omerfaruk/Projects/okul/BOB/BOB/solution1/sim/verilog/divider.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_divider_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/omerfaruk/Projects/okul/BOB/BOB/solution1/sim/verilog/divider_mul_64s_16ns_80_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider_mul_64s_16ns_80_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/omerfaruk/Projects/okul/BOB/BOB/solution1/sim/verilog/divider_mul_32s_32s_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider_mul_32s_32s_32_1_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/omerfaruk/Projects/okul/BOB/BOB/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dataflow_monitor
 Starting static elaboration
@@ -73,13 +81,16 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
-Compiling module xil_defaultlib.leading_zero_count_LUT_array_i_R...
-Compiling module xil_defaultlib.leading_zero_count
+Compiling module xil_defaultlib.divider_divLUT_ROM_AUTO_1R
+Compiling module xil_defaultlib.divider_mul_32ns_32s_64_1_1(NUM_...
+Compiling module xil_defaultlib.divider_mul_32s_32s_32_1_1(NUM_S...
+Compiling module xil_defaultlib.divider_mul_64s_16ns_80_1_1(NUM_...
+Compiling module xil_defaultlib.divider
 Compiling module xil_defaultlib.nodf_module_intf
 Compiling module xil_defaultlib.dataflow_monitor_1
-Compiling module xil_defaultlib.apatb_leading_zero_count_top
+Compiling module xil_defaultlib.apatb_divider_top
 Compiling module work.glbl
-Built simulation snapshot leading_zero_count
+Built simulation snapshot divider
 
 ****** xsim v2023.2.2 (64-bit)
   **** SW Build 4126759 on Thu Feb  8 23:52:05 MST 2024
@@ -89,3 +100,18 @@ Built simulation snapshot leading_zero_count
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 start_gui
+INFO: [Common 17-206] Exiting xsim at Sat Mar 16 06:18:22 2024...
+INFO: [COSIM 212-316] Starting C post checking ...
+14500 0
+10 225
+6 2101
+7 9
+11 14
+2 0
+4 0
+7 0
+division by zero
+4 2
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 179.03 seconds. CPU system time: 18.66 seconds. Elapsed time: 1852.27 seconds; current allocated memory: 11.965 MB.
+INFO: [HLS 200-112] Total CPU user time: 181.27 seconds. Total CPU system time: 19.03 seconds. Total elapsed time: 1855.89 seconds; peak allocated memory: 244.277 MB.

@@ -1,5 +1,5 @@
 
-set TopModule "leading_zero_count"
+set TopModule "divider"
 set ClockPeriod 10
 set ClockList ap_clk
 set HasVivadoClockPeriod 0
@@ -23,7 +23,7 @@ set ResetRegisterNum 0
 set FsmEncStyle onehot
 set MaxFanout 0
 set RtlPrefix {}
-set RtlSubPrefix leading_zero_count_
+set RtlSubPrefix divider_
 set ExtraCCFlags {}
 set ExtraCLdFlags {}
 set SynCheckOptions {}

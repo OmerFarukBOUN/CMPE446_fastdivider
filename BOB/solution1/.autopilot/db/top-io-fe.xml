@@ -1,14 +1,14 @@
 <root versionMajor = "1" versionMinor = "5">
-  <kernel src_name="leading_zero_count" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+  <kernel src_name="divider" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
     <args>
-      <arg id="0" access_type="r" src_name="input" src_type="ap_uint&lt;32&gt;" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="Register" hw_name="input_r" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="false">
+      <arg id="0" access_type="r" src_name="input" src_type="" src_isptr="1" src_bitwidth="64" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="Register" hw_name="input_r" hw_bitwidth="64" hw_size_or_depth="1" hw_kernel_support="false">
           <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
         </hw>
       </arg>
     </args>
-    <return src_type="ap_uint&lt;6&gt;" src_bitwidth="8" offset="0x0">
-      <hw hw_usage="data" hw_interface="Register" hw_name="return" hw_bitwidth="6" hw_kernel_support="false"/>
+    <return src_type="" src_bitwidth="96" offset="0x0">
+      <hw hw_usage="data" hw_interface="Register" hw_name="return" hw_bitwidth="96" hw_kernel_support="false"/>
     </return>
   </kernel>
 </root>

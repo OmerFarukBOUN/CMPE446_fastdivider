@@ -61913,15 +61913,15 @@ typedef struct {
  bool_type division_by_zero;
 } out_type;
 
-out_type divider(in_type input);
 
 #ifndef HLS_FASTSIM
 #ifdef __cplusplus
 extern "C"
 #endif
-ap_uint<6> apatb_leading_zero_count_sw(ap_uint<32>);
+out_type apatb_divider_sw(in_type);
 #endif
-# 41 "/home/omerfaruk/Projects/okul/BOB/div.hpp"
+# 40 "/home/omerfaruk/Projects/okul/BOB/div.hpp"
+out_type divider(in_type input);
 lzc_ret leading_zero_count(reg input);
 lut_output LUT(lut_input input);
 # 2 "/home/omerfaruk/Projects/okul/BOB/test_div.cpp" 2
@@ -61929,26 +61929,40 @@ lut_output LUT(lut_input input);
 
 
 using namespace std;
-# 31 "/home/omerfaruk/Projects/okul/BOB/test_div.cpp"
+
+
 
 #ifndef HLS_FASTSIM
-# 31 "/home/omerfaruk/Projects/okul/BOB/test_div.cpp"
+# 8 "/home/omerfaruk/Projects/okul/BOB/test_div.cpp"
 int main() {
- ap_uint<32> test_list[] = { 0x4, 0xFF, 0x1, -0x1, 0xFFFF, 0x1FF1, 0x1453,
-   0x12345678 };
- for (int i = 0; i < 8; i++) {
-  cout << (int) 
+
+ operand_type op1[] = { 29000, 250225, 16435, 100, 300, 10, 12, 14, 16, 18,
+   0xFFFFABCD };
+ operand_type op2[] = { 2, 25000, 2389, 13, 26, 5, 3, 2, 0, 4, 0x20FC0000 };
+
+ for (int i = 0; i < 10; i++) {
+  out_type output = 
 #ifndef HLS_FASTSIM
-#define leading_zero_count apatb_leading_zero_count_sw
+#define divider apatb_divider_sw
 #endif
-# 35 "/home/omerfaruk/Projects/okul/BOB/test_div.cpp"
-leading_zero_count(test_list[i])
-#undef leading_zero_count
-# 35 "/home/omerfaruk/Projects/okul/BOB/test_div.cpp"
- << endl;
+# 15 "/home/omerfaruk/Projects/okul/BOB/test_div.cpp"
+divider( { op1[i], op2[i] });
+#undef divider
+# 15 "/home/omerfaruk/Projects/okul/BOB/test_div.cpp"
+
+  if (output.division_by_zero == 1)
+   cout << "division by zero" << endl;
+  else
+   cout << output.quotient << " " << output.remainder << endl;
  }
- return 0;
+
+
+
+
+
+
+
 }
 #endif
-# 38 "/home/omerfaruk/Projects/okul/BOB/test_div.cpp"
+# 28 "/home/omerfaruk/Projects/okul/BOB/test_div.cpp"
 

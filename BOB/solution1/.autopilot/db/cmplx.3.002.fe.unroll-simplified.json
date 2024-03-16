@@ -1,14 +1,33 @@
 {
   "0": {
-    "basicblocks": 1,
+    "basicblocks": 9,
+    "calls": "1",
+    "file": "div.cpp",
+    "fileloc": 6,
+    "instructions": 86,
+    "loads": {
+      "G": 1,
+      "L": 1
+    },
+    "name": "divider",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 182
+  },
+  "1": {
+    "basicblocks": 37,
     "calls": "",
     "file": "div.cpp",
-    "fileloc": 119,
-    "instructions": 60,
+    "fileloc": 50,
+    "instructions": 96,
     "loads": {
-      "G": 4
+      "L": 1
     },
     "name": "leading_zero_count",
-    "total_instructions": 60
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 96
   }
 }

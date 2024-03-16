@@ -1,14 +1,14 @@
 {
   "0": {
-    "basicblocks": 1,
+    "basicblocks": 44,
     "calls": "",
     "file": "div.cpp",
-    "fileloc": 119,
-    "instructions": 56,
+    "fileloc": 6,
+    "instructions": 164,
     "loads": {
-      "G": 4
+      "G": 1
     },
-    "name": "leading_zero_count",
-    "total_instructions": 56
+    "name": "divider",
+    "total_instructions": 164
   }
 }

@@ -36,12 +36,12 @@ if {$ret == 1} {
 	return -code error -errorcode $::errorCode
 }
 
-if {[file isfile leading_zero_count.autotvin.dat]} {
-	file delete -force leading_zero_count.autotvin.dat
+if {[file isfile divider.autotvin.dat]} {
+	file delete -force divider.autotvin.dat
 }
 
-if {[file isfile leading_zero_count.autotvout.dat]} {
-	file delete -force leading_zero_count.autotvout.dat
+if {[file isfile divider.autotvout.dat]} {
+	file delete -force divider.autotvout.dat
 }
 
 sc_sim_check $ret $err "temp0.log"
