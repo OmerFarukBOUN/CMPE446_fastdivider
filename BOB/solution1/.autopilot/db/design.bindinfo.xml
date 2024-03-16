@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op and" ID="" IMPL="auto" LATENCY="0" OPTYPE="and" PRAGMA="" RTLNAME="intermediate4_fu_181_p2" SOURCE="div.cpp:170" VARIABLE="intermediate4" MODULE="leading_zero_count" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="LUTS16_fu_195_p2" SOURCE="div.cpp:171" VARIABLE="LUTS16" MODULE="leading_zero_count" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op and" ID="" IMPL="auto" LATENCY="0" OPTYPE="and" PRAGMA="" RTLNAME="intermediate4_1_fu_221_p2" SOURCE="div.cpp:170" VARIABLE="intermediate4_1" MODULE="leading_zero_count" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="LUTS16_1_fu_235_p2" SOURCE="div.cpp:171" VARIABLE="LUTS16_1" MODULE="leading_zero_count" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op and" ID="" IMPL="auto" LATENCY="0" OPTYPE="and" PRAGMA="" RTLNAME="intermediate5_fu_263_p2" SOURCE="div.cpp:175" VARIABLE="intermediate5" MODULE="leading_zero_count" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="ap_return" SOURCE="div.cpp:176" VARIABLE="add_ln176" MODULE="leading_zero_count" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
+	<BindNode BINDTYPE="storage" DISPLAY="bind_storage rom_np" ID="" IMPL="auto" LATENCY="1" OPTYPE="rom_np" PRAGMA="" RTLNAME="LUT_array_i_U" SOURCE="" VARIABLE="LUT_array_i" MODULE="leading_zero_count" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="2" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE="4 256 1"/>
+</BindInfo>

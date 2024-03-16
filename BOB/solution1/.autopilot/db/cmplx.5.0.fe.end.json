@@ -1,0 +1,14 @@
+{
+    "0": {
+        "name": "leading_zero_count",
+        "file": "div.cpp",
+        "fileloc": "119",
+        "instructions": "40",
+        "total_instructions": "40",
+        "calls": "",
+        "basicblocks": "1",
+        "loads": {
+            "G": "4"
+        }
+    }
+}

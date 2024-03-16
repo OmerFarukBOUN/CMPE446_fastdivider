@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="div.cpp" path="/home/omerfaruk/Projects/okul/BOB/div.cpp"/>
+    <originFiles name="div.hpp" path="/home/omerfaruk/Projects/okul/BOB/div.hpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test_div.cpp" path="/home/omerfaruk/Projects/okul/BOB/test_div.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

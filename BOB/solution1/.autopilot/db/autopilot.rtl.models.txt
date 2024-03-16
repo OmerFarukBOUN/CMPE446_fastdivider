@@ -1,0 +1,2 @@
+leading_zero_count_LUT_array_i_ROM_AUTO_1R
+leading_zero_count

@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "leading_zero_count",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "leading_zero_count"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/omerfaruk/Projects/okul/BOB/BOB/solution1/csynth.tcl",
+    "sourceLine": 17,
+    "success": true
+  }
+]

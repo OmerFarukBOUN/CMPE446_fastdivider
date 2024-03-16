@@ -1,0 +1,6 @@
+sv work "glbl.v"
+sv xil_defaultlib "leading_zero_count.v"
+sv xil_defaultlib "leading_zero_count.autotb.v"
+sv xil_defaultlib "leading_zero_count_LUT_array_i_ROM_AUTO_1R.v"
+sv xil_defaultlib "dataflow_monitor.sv"
+
