@@ -1,14 +1,33 @@
 {
   "0": {
-    "basicblocks": 44,
-    "calls": "",
+    "basicblocks": 10,
+    "calls": "1 1 1 1 1 1 1 1",
     "file": "div.cpp",
-    "fileloc": 6,
-    "instructions": 164,
+    "fileloc": 32,
+    "instructions": 236,
     "loads": {
-      "G": 1
+      "G": 2,
+      "L": 8
     },
     "name": "divider",
-    "total_instructions": 164
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 348
+  },
+  "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "div.cpp",
+    "fileloc": 220,
+    "instructions": 14,
+    "loads": {
+      "L": 1
+    },
+    "name": "LUT",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 14
   }
 }

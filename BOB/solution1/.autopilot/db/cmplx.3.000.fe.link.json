@@ -1,47 +1,71 @@
 {
   "0": {
-    "basicblocks": 7,
-    "calls": "2",
+    "basicblocks": 10,
+    "calls": "4 3",
     "file": "div.cpp",
-    "fileloc": 6,
-    "instructions": 326,
+    "fileloc": 32,
+    "instructions": 329,
     "loads": {
-      "L": 11
+      "L": 15
     },
     "name": "divider",
     "stores": {
       "L": 9
     },
-    "total_instructions": 4455
+    "total_instructions": 4953
   },
   "1": {
     "basicblocks": 11,
     "calls": "",
     "file": "div.cpp",
+    "fileloc": 101,
+    "instructions": 21,
+    "name": "clz",
+    "total_instructions": 40
+  },
+  "2": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "div.cpp",
     "fileloc": 220,
-    "instructions": 85,
+    "instructions": 49,
     "loads": {
-      "L": 9
+      "L": 5
     },
     "name": "LUT",
     "stores": {
-      "L": 9
-    },
-    "total_instructions": 243
-  },
-  "2": {
-    "basicblocks": 13,
-    "calls": "1",
-    "file": "div.cpp",
-    "fileloc": 50,
-    "instructions": 212,
-    "loads": {
       "L": 5
+    },
+    "total_instructions": 139
+  },
+  "3": {
+    "basicblocks": 19,
+    "calls": "2",
+    "file": "div.cpp",
+    "fileloc": 113,
+    "instructions": 299,
+    "loads": {
+      "L": 7
     },
     "name": "leading_zero_count",
     "stores": {
-      "L": 5
+      "L": 7
     },
-    "total_instructions": 1645
+    "total_instructions": 2059
+  },
+  "4": {
+    "basicblocks": 7,
+    "calls": "1",
+    "file": "div.cpp",
+    "fileloc": 82,
+    "instructions": 100,
+    "loads": {
+      "L": 4
+    },
+    "name": "init_divLut",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 505
   }
 }

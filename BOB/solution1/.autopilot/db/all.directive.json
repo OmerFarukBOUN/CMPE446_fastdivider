@@ -16,6 +16,27 @@
       ]
     },
     "slx": false,
+    "sourceFile": "/home/omerfaruk/Projects/okul/BOB/BOB/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "divider",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "divider"
+        }
+      ]
+    },
+    "slx": false,
     "sourceFile": "/home/omerfaruk/Projects/okul/BOB/BOB/solution1/csynth.tcl",
     "sourceLine": 17,
     "success": true

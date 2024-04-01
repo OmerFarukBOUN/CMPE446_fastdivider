@@ -3,26 +3,52 @@
 
 using namespace std;
 
+
+//	lookup_type divLUT[] = { 0b1000000000000000, 0b0111100001011100,
+//			0b0111000101100010, 0b0110101011111111, 0b0110010100100011,
+//			0b0101111110111110, 0b0101101011000101, 0b0101011000101101,
+//			0b0101000111101100, 0b0100110111111001, 0b0100101001001110,
+//			0b0100011011100011, 0b0100001110110100, 0b0100000010111010,
+//			0b0011110111110001, 0b0011101101010110, 0b0011100011100100,
+//			0b0011011010010111, 0b0011010001101110, 0b0011001001100101,
+//			0b0011000001111001, 0b0010111010101001, 0b0010110011110011,
+//			0b0010101101010100, 0b0010100111001100, 0b0010100001011000,
+//			0b0010011011110111, 0b0010010110100111, 0b0010010001101001,
+//			0b0010001100111010, 0b0010001000011001, 0b0010000100000110 };
+
+//	lookup_type divLUT[] = { 0, 7387213, 6472871, 5635775, 4867464, 4160603, 3508808, 2906507, 2348810, 1831421, 1350547, 902830, 485291, 95278, 7849454, 7165823, 6524473, 5921987, 5355287, 4821595, 4318396, 3843410, 3394567, 2969983, 2567941, 2186873, 1825345, 1482044, 1155764, 845399, 549930, 268419 };
+//	shamt_type shamtLUT[] = {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
+
+//lookup_type divLUT[tableSize];
+//shamt_type shamtLUT[tableSize];
+//
+//for (int i=0;i<tableSize;i++) {
+////		double_cast current = {.d = 1.0/(1+i/32.0)/(1+i/32.0)};
+//	float_cast current = {.f = 1.0/(1+i/32.0)/(1+i/32.0)};
+//	divLUT[i] = current.parts.used;
+//	shamtLUT[i] = 127-current.parts.exponent;
+//}
+
 out_type divider(in_type input) {
 #ifndef LZC
 #pragma HLS top name=DESIGN_TOP
 #endif
 
-	lookup_type divLUT[] = { 0b1000000000000000, 0b0111100001011100,
-			0b0111000101100010, 0b0110101011111111, 0b0110010100100011,
-			0b0101111110111110, 0b0101101011000101, 0b0101011000101101,
-			0b0101000111101100, 0b0100110111111001, 0b0100101001001110,
-			0b0100011011100011, 0b0100001110110100, 0b0100000010111010,
-			0b0011110111110001, 0b0011101101010110, 0b0011100011100100,
-			0b0011011010010111, 0b0011010001101110, 0b0011001001100101,
-			0b0011000001111001, 0b0010111010101001, 0b0010110011110011,
-			0b0010101101010100, 0b0010100111001100, 0b0010100001011000,
-			0b0010011011110111, 0b0010010110100111, 0b0010010001101001,
-			0b0010001100111010, 0b0010001000011001, 0b0010000100000110 };
 
+//		lookup_type divLUT[] = { 0, 7387213, 6472871, 5635775, 4867464, 4160603,
+//			3508808, 2906507, 2348810, 1831421, 1350547, 902830, 485291, 95278,
+//			7849454, 7165823, 6524473, 5921987, 5355287, 4821595, 4318396,
+//			3843410, 3394567, 2969983, 2567941, 2186873, 1825345, 1482044,
+//			1155764, 845399, 549930, 268419 };
+//	shamt_type shamtLUT[] = { 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2,
+//			2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+	lookup_type divLUT[tableSize];
+	shamt_type shamtLUT[tableSize];
+	init_divLut(divLUT, shamtLUT);
 	operand_type op1 = input.op1;
 	operand_type op2 = input.op2;
 	bool_type division_by_zero = 0;
+	operand_type quotient_first;
 	operand_type quotient;
 	operand_type remainder;
 	if (op2 == 0) {
@@ -31,20 +57,57 @@ out_type divider(in_type input) {
 		remainder = 0;
 	} else {
 		lzc_ret lzc = leading_zero_count(op2);
-		operand_type yh = (op2 << lzc) & maskH;
-		operand_type yl = (op2 << lzc) & maskL;
-		ap_uint<64> tmp = (op1 * uns(yh - yl)
-				* (divLUT[ap_uint<5>((yh << 1)(31, 27))])) >> (16 + lzc); // first 16 shift to set lut value at right place
-		quotient = (tmp >> 61 - 2 * lzc);
-		ap_int<32> tmp2 = (ap_int<64> ) op1 - op2 * quotient;
+		operand_type niced_y = (op2 << lzc).range(31,0);
+		operand_type yh = niced_y & maskH;
+		operand_type yl = niced_y & maskL;
+		ap_uint<tablenofbit> index = yh.range(30, 31-tablenofbit);
+		quotient_first = ((op1 * operand_type(yh - yl)) * (1, divLUT[index]))>>(2*XLEN-2+shamtLUT[index]+usedLength-lzc);
+		ap_int<32> tmp2 = (ap_int<64>) op1 - op2 * quotient_first;
 		if (tmp2 < 0) {
-			quotient -= 1;
+			quotient = quotient_first-1;
 			remainder = tmp2 + op2;
 		} else {
-			remainder = tmp2;
+			if (op2<= tmp2) {
+				quotient = quotient_first +1;
+				remainder = tmp2 - op2;
+			} else {
+				quotient = quotient_first;
+				remainder = tmp2;
+			}
 		}
 	}
 	return {quotient, remainder, division_by_zero};
+}
+
+void init_divLut(lookup_type divLUT[tableSize], shamt_type shamtLUT[tableSize]) {
+	int main_clz = 2*tablenofbit;
+	for (int i=0;i<tableSize;i++) {
+		ap_uint<64> current = ((ap_uint<64>)1<<63)/((ap_uint<64>)(tableSize+i)*(tableSize+i));
+		int shamt_entry = clz(current) - main_clz;
+		current[63-2*tablenofbit-shamt_entry] = 0;
+		current = current >> (63-2*tablenofbit-shamt_entry-usedLength);
+		divLUT[i] = current.range(usedLength-1,0);
+		shamtLUT[i] = shamt_entry;
+//		if (i!=0) {
+//			if (64%i !=0) {
+//				divLUT[i] += 1;
+//			}
+//		}
+//
+////		cout << divLUT[i]<<" ," ;
+	}
+
+}
+int clz(ap_uint<64> bruh) {
+	int ret = 0;
+	for (int i = 0; i<64;i++) {
+		if (bruh[63-i]) {
+			break;
+		} else {
+			ret++;
+		}
+	}
+	return ret;
 }
 
 lzc_ret leading_zero_count(reg input) {
@@ -57,8 +120,8 @@ lzc_ret leading_zero_count(reg input) {
 	ap_uint<2> intermediate2;
 #endif
 #if kernel_size < 8
-	ap_uint<3> LUTS4[8];
-	ap_uint<3> intermediate3;
+	ap_uint<4> LUTS4[8];
+	ap_uint<4> intermediate3;
 #endif
 	ap_uint<4> LUTS8[4];
 	ap_uint<5> LUTS16[2];

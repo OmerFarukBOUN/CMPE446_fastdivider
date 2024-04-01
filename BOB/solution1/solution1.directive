@@ -5,6 +5,11 @@
                 <option name="name" value="divider"/>
             </pragma>
         </directive>
+        <directive functionName="divider" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="divider"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

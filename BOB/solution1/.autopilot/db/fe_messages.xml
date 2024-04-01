@@ -2,32 +2,32 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/omerfaruk/Projects/okul/BOB/BOB/solution1/csynth.tcl:17:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="divider" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=divider" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="div.cpp:8:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/omerfaruk/Projects/okul/BOB/BOB/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="divider" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=divider" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="div.cpp:34:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="divider" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=DESIGN_TOP" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="div.cpp:90:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="div.cpp:140:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="leading_zero_count" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="div.cpp:92:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="leading_zero_count" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="div.cpp:102:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="div.cpp:153:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="leading_zero_count" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-415" msg_severity="INFO" msg_loc="div.cpp:92:9" msg_body="Performing recursive inline in function 'leading_zero_count'">
-        <args Callee="leading_zero_count"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="div.cpp:165:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="leading_zero_count" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="div.cpp:93:13" msg_body="Inlining function 'LUT(ap_uint&lt;8&gt;) (.1)' into 'leading_zero_count(ap_uint&lt;32&gt;)'">
-        <args Callee="LUT(ap_uint&lt;8&gt;) (.1)" Callee-DebugLoc="File div.cpp Line 220 Column 0" Caller="leading_zero_count(ap_uint&lt;32&gt;)" Caller-DebugLoc="File div.cpp Line 50 Column 0"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="div.cpp:113:0" msg_body="Unrolling loop 'VITIS_LOOP_164_3' (div.cpp:164:20) in function 'leading_zero_count' completely with a factor of 2">
+        <args Factor="2" LoopLoc="div.cpp:164:20" LoopName="VITIS_LOOP_164_3"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="div.cpp:50:0" msg_body="Unrolling loop 'VITIS_LOOP_101_2' (div.cpp:101:20) in function 'leading_zero_count' completely with a factor of 2">
-        <args Factor="2" LoopLoc="div.cpp:101:20" LoopName="VITIS_LOOP_101_2"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="div.cpp:113:0" msg_body="Unrolling loop 'VITIS_LOOP_152_2' (div.cpp:152:20) in function 'leading_zero_count' completely with a factor of 4">
+        <args Factor="4" LoopLoc="div.cpp:152:20" LoopName="VITIS_LOOP_152_2"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="div.cpp:50:0" msg_body="Unrolling loop 'VITIS_LOOP_89_1' (div.cpp:89:19) in function 'leading_zero_count' completely with a factor of 4">
-        <args Factor="4" LoopLoc="div.cpp:89:19" LoopName="VITIS_LOOP_89_1"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="div.cpp:113:0" msg_body="Unrolling loop 'VITIS_LOOP_139_1' (div.cpp:139:20) in function 'leading_zero_count' completely with a factor of 8">
+        <args Factor="8" LoopLoc="div.cpp:139:20" LoopName="VITIS_LOOP_139_1"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="div.cpp:6:0" msg_body="Inlining function 'leading_zero_count(ap_uint&lt;32&gt;)' into 'divider(in_type)'">
-        <args Callee="leading_zero_count(ap_uint&lt;32&gt;)" Callee-DebugLoc="File div.cpp Line 50 Column 0" Caller="divider(in_type)" Caller-DebugLoc="File div.cpp Line 6 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="div.cpp:32:0" msg_body="Inlining function 'leading_zero_count(ap_uint&lt;32&gt;)' into 'divider(in_type)'">
+        <args Callee="leading_zero_count(ap_uint&lt;32&gt;)" Callee-DebugLoc="File div.cpp Line 113 Column 0" Caller="divider(in_type)" Caller-DebugLoc="File div.cpp Line 32 Column 0"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

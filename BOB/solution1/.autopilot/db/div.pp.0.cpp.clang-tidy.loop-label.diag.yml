@@ -47,21 +47,48 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_1247_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_89_1:  '
-    FileOffset:      89
+    Message:         'Added loop label VITIS_LOOP_84_1:  '
+    FileOffset:      84
     FilePath:        div.cpp
     Replacements:    
       - FilePath:        /home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp
-        Offset:          1850972
+        Offset:          1850820
         Length:          0
-        ReplacementText: 'VITIS_LOOP_89_1: '
+        ReplacementText: 'VITIS_LOOP_84_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_101_2:  '
-    FileOffset:      101
+    Message:         'Added loop label VITIS_LOOP_103_1:  '
+    FileOffset:      103
     FilePath:        div.cpp
     Replacements:    
       - FilePath:        /home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp
-        Offset:          1851126
+        Offset:          1851191
         Length:          0
-        ReplacementText: 'VITIS_LOOP_101_2: '
+        ReplacementText: 'VITIS_LOOP_103_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_139_1:  '
+    FileOffset:      139
+    FilePath:        div.cpp
+    Replacements:    
+      - FilePath:        /home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp
+        Offset:          1851525
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_139_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_152_2:  '
+    FileOffset:      152
+    FilePath:        div.cpp
+    Replacements:    
+      - FilePath:        /home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp
+        Offset:          1851660
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_152_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_164_3:  '
+    FileOffset:      164
+    FilePath:        div.cpp
+    Replacements:    
+      - FilePath:        /home/omerfaruk/Projects/okul/BOB/BOB/solution1/.autopilot/db/div.pp.0.cpp
+        Offset:          1851855
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_164_3: '
 ...

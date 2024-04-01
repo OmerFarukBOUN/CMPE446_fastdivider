@@ -1,4 +1,4 @@
-obj/div.o: ../../../../div.cpp \
+obj/div.o: ../../../../div.cpp ../../../../div.hpp \
  /home/omerfaruk/tools/Xilinx/Vitis_HLS/2023.2/include/ap_int.h \
  /home/omerfaruk/tools/Xilinx/Vitis_HLS/2023.2/include/etc/ap_common.h \
  /home/omerfaruk/tools/Xilinx/Vitis_HLS/2023.2/include/etc/ap_decl.h \
@@ -18,5 +18,4 @@ obj/div.o: ../../../../div.cpp \
  /home/omerfaruk/tools/Xilinx/Vitis_HLS/2023.2/include/ap_fixed.h \
  /home/omerfaruk/tools/Xilinx/Vitis_HLS/2023.2/include/etc/ap_fixed_base.h \
  /home/omerfaruk/tools/Xilinx/Vitis_HLS/2023.2/include/etc/ap_fixed_ref.h \
- /home/omerfaruk/tools/Xilinx/Vitis_HLS/2023.2/include/etc/ap_fixed_special.h \
- ../../../../div.hpp
+ /home/omerfaruk/tools/Xilinx/Vitis_HLS/2023.2/include/etc/ap_fixed_special.h

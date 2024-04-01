@@ -15,31 +15,31 @@
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>7.171</EstimatedClockPeriod>
+            <EstimatedClockPeriod>7.200</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
             <Best-caseLatency>1</Best-caseLatency>
             <Average-caseLatency>2</Average-caseLatency>
-            <Worst-caseLatency>3</Worst-caseLatency>
+            <Worst-caseLatency>2</Worst-caseLatency>
             <Best-caseRealTimeLatency>10.000 ns</Best-caseRealTimeLatency>
             <Average-caseRealTimeLatency>20.000 ns</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>30.000 ns</Worst-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>20.000 ns</Worst-caseRealTimeLatency>
             <Interval-min>2</Interval-min>
-            <Interval-max>4</Interval-max>
+            <Interval-max>3</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfViolations>
             <IssueType>-</IssueType>
             <ViolationType>-</ViolationType>
-            <SourceLocation>div.cpp:6</SourceLocation>
+            <SourceLocation>div.cpp:32</SourceLocation>
         </SummaryOfViolations>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>0</BRAM_18K>
-            <DSP>11</DSP>
-            <FF>313</FF>
-            <LUT>1455</LUT>
+            <BRAM_18K>1</BRAM_18K>
+            <DSP>15</DSP>
+            <FF>277</FF>
+            <LUT>2145</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -144,46 +144,140 @@
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="2">
             <ModuleName>divider</ModuleName>
-            <BindInstances>LUTS16_fu_674_p2 LUTS16_1_fu_714_p2 ret_val_fu_756_p2 sub_ln36_fu_797_p2 mul_32ns_32s_64_1_1_U1 mul_64s_16ns_80_1_1_U3 add_ln37_fu_839_p2 sub_ln38_fu_866_p2 sub_ln38_1_fu_880_p2 mul_32s_32s_32_1_1_U2 tmp2_fu_927_p2 quotient_2_fu_941_p2 add_ln42_fu_948_p2 divLUT_U</BindInstances>
+            <InstancesList>
+                <Instance>
+                    <InstName>LUTS4_LUT_fu_194</InstName>
+                    <ModuleName>LUT</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>194</ID>
+                </Instance>
+                <Instance>
+                    <InstName>LUTS4_1_LUT_fu_199</InstName>
+                    <ModuleName>LUT</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>199</ID>
+                </Instance>
+                <Instance>
+                    <InstName>LUTS4_2_LUT_fu_204</InstName>
+                    <ModuleName>LUT</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>204</ID>
+                </Instance>
+                <Instance>
+                    <InstName>LUTS4_3_LUT_fu_209</InstName>
+                    <ModuleName>LUT</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>209</ID>
+                </Instance>
+                <Instance>
+                    <InstName>LUTS4_4_LUT_fu_214</InstName>
+                    <ModuleName>LUT</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>214</ID>
+                </Instance>
+                <Instance>
+                    <InstName>LUTS4_5_LUT_fu_219</InstName>
+                    <ModuleName>LUT</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>219</ID>
+                </Instance>
+                <Instance>
+                    <InstName>LUTS4_6_LUT_fu_224</InstName>
+                    <ModuleName>LUT</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>224</ID>
+                </Instance>
+                <Instance>
+                    <InstName>LUTS4_7_LUT_fu_229</InstName>
+                    <ModuleName>LUT</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>229</ID>
+                </Instance>
+            </InstancesList>
+            <BindInstances>LUTS8_fu_398_p2 LUTS8_1_fu_432_p2 LUTS8_2_fu_466_p2 LUTS8_3_fu_500_p2 LUTS16_fu_540_p2 LUTS16_1_fu_580_p2 ret_val_fu_622_p2 sub_ln64_fu_682_p2 mul_32ns_32ns_64_1_1_U2 mul_64ns_33ns_97_1_1_U4 mul_32s_32s_32_1_1_U3 tmp2_fu_757_p2 add_ln71_fu_776_p2 sub_ln72_fu_783_p2 add_ln67_fu_789_p2 add_ln68_fu_796_p2 divLUT_U shamtLUT_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
+        <Module>
+            <Name>LUT</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.491</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>div.cpp:222</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>0</FF>
+                    <AVAIL_FF>460800</AVAIL_FF>
+                    <UTIL_FF>0</UTIL_FF>
+                    <LUT>122</LUT>
+                    <AVAIL_LUT>230400</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>624</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1728</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>96</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
         <Module>
             <Name>divider</Name>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.171</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.200</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>1</Best-caseLatency>
                     <Average-caseLatency>2</Average-caseLatency>
-                    <Worst-caseLatency>3</Worst-caseLatency>
+                    <Worst-caseLatency>2</Worst-caseLatency>
                     <Best-caseRealTimeLatency>10.000 ns</Best-caseRealTimeLatency>
                     <Average-caseRealTimeLatency>20.000 ns</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>30.000 ns</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>2 ~ 4</PipelineInitiationInterval>
+                    <Worst-caseRealTimeLatency>20.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2 ~ 3</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>div.cpp:6</SourceLocation>
+                    <SourceLocation>div.cpp:32</SourceLocation>
                 </SummaryOfViolations>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>0</BRAM_18K>
+                    <BRAM_18K>1</BRAM_18K>
                     <AVAIL_BRAM>624</AVAIL_BRAM>
-                    <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>11</DSP>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>15</DSP>
                     <AVAIL_DSP>1728</AVAIL_DSP>
                     <UTIL_DSP>~0</UTIL_DSP>
-                    <FF>313</FF>
+                    <FF>277</FF>
                     <AVAIL_FF>460800</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>1455</LUT>
+                    <LUT>2145</LUT>
                     <AVAIL_LUT>230400</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <URAM>0</URAM>
@@ -192,20 +286,24 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="LUTS16_fu_674_p2" SOURCE="div.cpp:106" STORAGESUBTYPE="" URAM="0" VARIABLE="LUTS16"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="LUTS16_1_fu_714_p2" SOURCE="div.cpp:106" STORAGESUBTYPE="" URAM="0" VARIABLE="LUTS16_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ret_val_fu_756_p2" SOURCE="div.cpp:111" STORAGESUBTYPE="" URAM="0" VARIABLE="ret_val"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln36_fu_797_p2" SOURCE="div.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln36"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32ns_32s_64_1_1_U1" SOURCE="div.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln36"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_64s_16ns_80_1_1_U3" SOURCE="div.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln37"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_fu_839_p2" SOURCE="div.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln37"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln38_fu_866_p2" SOURCE="div.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln38"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln38_1_fu_880_p2" SOURCE="div.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln38_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U2" SOURCE="div.cpp:39" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln39"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="tmp2_fu_927_p2" SOURCE="div.cpp:39" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="quotient_2_fu_941_p2" SOURCE="div.cpp:41" STORAGESUBTYPE="" URAM="0" VARIABLE="quotient_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln42_fu_948_p2" SOURCE="div.cpp:42" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln42"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="divLUT_U" SOURCE="" STORAGESIZE="16 32 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="divLUT"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="LUTS8_fu_398_p2" SOURCE="div.cpp:161" STORAGESUBTYPE="" URAM="0" VARIABLE="LUTS8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="LUTS8_1_fu_432_p2" SOURCE="div.cpp:161" STORAGESUBTYPE="" URAM="0" VARIABLE="LUTS8_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="LUTS8_2_fu_466_p2" SOURCE="div.cpp:161" STORAGESUBTYPE="" URAM="0" VARIABLE="LUTS8_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="LUTS8_3_fu_500_p2" SOURCE="div.cpp:161" STORAGESUBTYPE="" URAM="0" VARIABLE="LUTS8_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="LUTS16_fu_540_p2" SOURCE="div.cpp:169" STORAGESUBTYPE="" URAM="0" VARIABLE="LUTS16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="LUTS16_1_fu_580_p2" SOURCE="div.cpp:169" STORAGESUBTYPE="" URAM="0" VARIABLE="LUTS16_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ret_val_fu_622_p2" SOURCE="div.cpp:174" STORAGESUBTYPE="" URAM="0" VARIABLE="ret_val"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln64_fu_682_p2" SOURCE="div.cpp:64" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln64"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32ns_32ns_64_1_1_U2" SOURCE="div.cpp:64" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln64"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="8" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_64ns_33ns_97_1_1_U4" SOURCE="div.cpp:64" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln64_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U3" SOURCE="div.cpp:65" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln65"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="tmp2_fu_757_p2" SOURCE="div.cpp:65" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_fu_776_p2" SOURCE="div.cpp:71" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln71"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln72_fu_783_p2" SOURCE="div.cpp:72" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln72"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_fu_789_p2" SOURCE="div.cpp:67" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln67"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln68_fu_796_p2" SOURCE="div.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln68"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="divLUT_U" SOURCE="" STORAGESIZE="32 32 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="divLUT"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="shamtLUT_U" SOURCE="" STORAGESIZE="2 32 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_1p" URAM="0" VARIABLE="shamtLUT"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -319,10 +417,10 @@
     </ReportSWInterface>
     <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
     <PragmaReport>
-        <Pragma type="top" location="div.cpp:8" status="valid" parentFunction="divider" variable="" isDirective="0" options="name=DESIGN_TOP"/>
-        <Pragma type="unroll" location="div.cpp:90" status="valid" parentFunction="leading_zero_count" variable="" isDirective="0" options=""/>
-        <Pragma type="inline" location="div.cpp:92" status="valid" parentFunction="leading_zero_count" variable="" isDirective="0" options="recursive"/>
-        <Pragma type="unroll" location="div.cpp:102" status="valid" parentFunction="leading_zero_count" variable="" isDirective="0" options=""/>
+        <Pragma type="top" location="div.cpp:34" status="valid" parentFunction="divider" variable="" isDirective="0" options="name=DESIGN_TOP"/>
+        <Pragma type="unroll" location="div.cpp:140" status="valid" parentFunction="leading_zero_count" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="div.cpp:153" status="valid" parentFunction="leading_zero_count" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="div.cpp:165" status="valid" parentFunction="leading_zero_count" variable="" isDirective="0" options=""/>
     </PragmaReport>
 </profile>
 

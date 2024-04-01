@@ -3,9 +3,15 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../test_div.cpp in debug mode
    Compiling ../../../../div.cpp in debug mode
    Generating csim.exe
-29
-24
-31
-0
+14500 0 14500
+10 225 10
+6 2101 6
+7 9 7
+11 14 11
+1 5 2
+4 0 4
+7 0 7
+division by zero
+4 2 4
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

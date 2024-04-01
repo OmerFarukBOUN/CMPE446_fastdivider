@@ -13,7 +13,7 @@ open_solution "solution1" -flow_target vivado
 set_part {xczu7ev-ffvf1517-3-e}
 create_clock -period 10 -name default
 config_cosim -tool xsim -trace_level port -wave_debug
-#source "./BOB/solution1/directives.tcl"
+source "./BOB/solution1/directives.tcl"
 csim_design -clean
 csynth_design
 cosim_design -wave_debug -trace_level port
